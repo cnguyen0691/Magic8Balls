@@ -31,21 +31,25 @@ public class Main {
         balls.add("Outlook not so good");
         balls.add("Very doubtful");
 
+        System.out.println("Ask question: ");
+        String question = input.next();
+        System.out.println("Magic 8-Ball says: " + randItems(balls));
 
         while (true) {
-            System.out.println("Ask question: ");
-            String question = input.next();
+            System.out.println("Do you have another for the Magic?(y/n): ");
+            String answer = input.next();
 
-            if (question.equalsIgnoreCase("Q")) {
+
+            if (answer.equalsIgnoreCase("n")) {
                 System.out.println("Thank you. Have a good day!");
                 break;
+            }else if (answer.equalsIgnoreCase("y")){
+                System.out.println("You Ask: ");
+                String ans = input.next();
             }
-            for (int i = 0; i < balls.size(); i++) {
-                if (!question.equalsIgnoreCase("q")){
 
-                }
-            }
-            System.out.println(randItems(balls));
+
+            System.out.println("Magic 8-Ball says: " + randItems(balls));
 
         }
 
